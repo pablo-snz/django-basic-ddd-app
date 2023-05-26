@@ -360,5 +360,3 @@ While the application is running in a Docker container, you can perform tests by
 ```bash
 docker-compose exec web pytest --cov=api
 ```
-
-This command tells Docker to execute the command python manage.py test inside the running container named web.
