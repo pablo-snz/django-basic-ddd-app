@@ -1,4 +1,4 @@
-from django_basic_ddd_app.api.domain.value_objects.description import Description
+from api.domain.value_objects.description import Description
 import pytest
 
 # Test VO Description, business rules:

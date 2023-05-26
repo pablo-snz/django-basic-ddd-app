@@ -1,7 +1,7 @@
 import pytest
 
 from test.unit.application.services import MockedRepository, MockedUnitOfWork
-from django_basic_ddd_app.api.application.services.product_command import (
+from api.application.services.product_command import (
     ProductCommandService,
 )
 

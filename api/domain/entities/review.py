@@ -1,6 +1,6 @@
-from django_basic_ddd_app.api.domain.value_objects.user_id import UserId
-from django_basic_ddd_app.api.domain.value_objects.rating import Rating
-from django_basic_ddd_app.api.domain.value_objects.description import Description
+from api.domain.value_objects.user_id import UserId
+from api.domain.value_objects.rating import Rating
+from api.domain.value_objects.description import Description
 
 
 class Review:

@@ -2,9 +2,9 @@ from uuid import UUID
 from rest_framework.request import Request
 from rest_framework.response import Response
 
-from django_basic_ddd_app.api.domain.exceptions.entity_not_exist_exception import EntityNotExistException
-from django_basic_ddd_app.api.application.services.review_command import ReviewCommandService
-from django_basic_ddd_app.api.infrastructure.controller.base_controller import BaseController
+from api.domain.exceptions.entity_not_exist_exception import EntityNotExistException
+from api.application.services.review_command import ReviewCommandService
+from api.infrastructure.controller.base_controller import BaseController
 
 
 class CreateReviewController(BaseController):

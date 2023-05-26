@@ -1,5 +1,5 @@
 import pytest
-from django_basic_ddd_app.api.domain.entities.review import Review
+from api.domain.entities.review import Review
 
 # Review es parte de nuestro agregado que tiene la raiz en Product.
 # Review es una entidad en tanto que tiene identidad propia y es mutable.

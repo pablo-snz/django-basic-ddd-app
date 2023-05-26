@@ -1,6 +1,6 @@
-from django_basic_ddd_app.api.domain.entities.product import Product
-from django_basic_ddd_app.api.domain.interfaces.repository import ProductRepository
-from django_basic_ddd_app.api.application.interfaces.uow import UnitOfWork
+from api.domain.entities.product import Product
+from api.domain.interfaces.repository import ProductRepository
+from api.application.interfaces.uow import UnitOfWork
 from uuid import UUID
 
 

@@ -1,9 +1,9 @@
 from uuid import UUID
-from django_basic_ddd_app.api.domain.interfaces.repository import ProductRepository
-from django_basic_ddd_app.api.domain.exceptions.entity_not_exist_exception import (
+from api.domain.interfaces.repository import ProductRepository
+from api.domain.exceptions.entity_not_exist_exception import (
     EntityNotExistException,
 )
-from django_basic_ddd_app.api.application.interfaces.uow import UnitOfWork
+from api.application.interfaces.uow import UnitOfWork
 
 
 class ReviewCommandService:

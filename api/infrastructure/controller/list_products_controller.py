@@ -2,9 +2,9 @@ from typing import List
 from rest_framework.request import Request
 from rest_framework.response import Response
 
-from django_basic_ddd_app.api.domain.entities.product import Product
-from django_basic_ddd_app.api.application.services.product_query import ProductQueryService
-from django_basic_ddd_app.api.infrastructure.controller.base_controller import BaseController
+from api.domain.entities.product import Product
+from api.application.services.product_query import ProductQueryService
+from api.infrastructure.controller.base_controller import BaseController
 
 
 class ListProductsController(BaseController):
