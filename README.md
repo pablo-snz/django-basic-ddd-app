@@ -8,7 +8,7 @@ This project uses the OpenAPI 3.0.3 specification for defining and documenting A
 
 - **GET /api/products/list**: Lists all available products. 
 - **POST /api/products/create**: Creates a new product. 
-- **POST /api/review/create**: Creates a new review for a product.
+- **POST /api/reviews/create**: Creates a new review for a product.
 
 For authentication, the API uses JSON Web Tokens (JWT). Therefore, to access these endpoints, include the token in the request header.
 
@@ -89,7 +89,7 @@ paths:
         '404':
           description: Not Found
           
-  /api/review/create:
+  /api/reviews/create:
     post:
       tags:
         - Reviews
