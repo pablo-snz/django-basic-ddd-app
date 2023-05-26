@@ -211,21 +211,68 @@ poetry install
 This project uses Domain-Driven Design, resulting in the following structure:
 
 ```bash 
-.
+api
 ├── application
-│   └── __init__.py
+│   ├── interfaces
+│   │   └── uow.py
+│   └── services
+│       ├── product_command.py
+│       ├── product_query.py
+│       └── review_command.py
 ├── domain
-│   └── __init__.py
-├── infrastructure
-│   ├── admin.py
-│   ├── apps.py
-│   ├── __init__.py
-│   ├── migrations
-│   │   └── __init__.py
-│   └── models.py
-└── __init__.py
+│   ├── entities
+│   │   ├── product.py
+│   │   └── review.py
+│   ├── interfaces
+│   │   └── repository.py
+│   └── value_objects
+│       ├── average_rating.py
+│       ├── description.py
+│       ├── name.py
+│       ├── rating.py
+│       ├── review_count.py
+│       └── user_id.py
+└──  infrastructure
+          ├── apps.py
+          ├── admin.py
+          ├── controller
+          │         ├── base_controller.py
+          │         ├── create_product_controller.py
+          │         ├── create_review_controller.py
+          │         └── list_products_controller.py
+          ├── django_repository.py
+          ├── django_uow.py
+          └── models.py
 
 ```
+## Architecture Overview
+
+The architecture of this project is centered around Domain-Driven Design (DDD), a design methodology aimed at handling complex domains. This strategic design approach separates the system into different layers, each having its specific responsibilities, leading to a system that is easier to manage, maintain, and scale.
+
+### Domain Layer
+
+At the core of this project lies the domain layer, which encapsulates the business logic, ensuring that all business rules are strictly adhered to. This layer is structured around entities such as `products` (our aggregate root) and `reviews`, and value objects such as average ratings, descriptions, names, etc.
+
+The entities represent key business objects that have both a unique identity and a lifecycle. On the other hand, value objects are immutable and they are used to describe certain aspects of the domain. They do not have a conceptual identity.
+
+### Application Layer
+
+The application layer is responsible for orchestrating the execution of business operations, delegating the business rules to the domain layer. In this project, the application layer is divided into three services
+
+- `ProductCommandService` - responsible for handling commands related to products, such as creating a new product.
+- `ProductQueryService` - responsible for handling queries related to products, such as listing all available products.
+- `ReviewCommandService` - responsible for handling commands related to reviews, such as creating a new review.
+
+Note that this separation of concerns adheres to the Command Query Responsibility Segregation (CQRS) pattern.
+
+Also, the Unit of Work pattern has been implemented to manage transactions, ensuring that there is only one transaction per business operation, and that all work within a transaction is completed or rolled back as a single unit.
+
+### Infrastructure Layer
+
+The infrastructure layer provides implementations of technical concerns such as data access and network communication. Here, we have defined models for persistence mechanisms, mirroring the domain entities as required by Django's ORM. This adheres to the Repository pattern, which provides a collection-like interface for accessing domain entities.
+
+By separating these concerns, the codebase achieves a high level of modularity, making it easier to understand, maintain and extend. It also supports the Dependency Inversion Principle (DIP). This is achieved through the use of interface definitions in each layer.
+
 
 ## Running the Application
 
