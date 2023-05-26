@@ -23,7 +23,7 @@ class BaseController(APIView):
             _, token = auth_header.split()
             try:
                 # hardcoded secret key - Esto esta fatal. pero por falta de tiempo se queda asi.
-                user = jwt.decode(token, "yourstep", algorithms=["HS256"]).get(
+                user = jwt.decode(token, "secret", algorithms=["HS256"]).get(
                     "user_id", None
                 )
                 user = str(user)
