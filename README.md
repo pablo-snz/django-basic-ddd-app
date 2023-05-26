@@ -1,6 +1,6 @@
 # Django Basic DDD App
 
-This repository is a simple e-commerce API created with Django and [django-ddd](https://github.com/jdiazromeral/django-ddd)
+This repository is a simple e-commerce API created with Django and [django-ddd](https://github.com/jdiazromeral/django-ddd).
 
 ## API Definition
 
@@ -133,7 +133,7 @@ components:
         review:
           type: string
           description: Review text for the product
-          example: Increible prueba tecnica
+          example: Increible producto
         grade:
           type: number
           description: Review grade for the product
@@ -148,11 +148,11 @@ components:
         name:
           type: string
           description: Name of the product
-          example: prueba tecnica
+          example: Product1
         description:
           type: string
           description: Description of the product
-          example: prueba tecnica de pablo
+          example: producto 1
           
     ProductList:
       type: object
@@ -172,7 +172,7 @@ components:
         user_review:
           type: string
           description: A user's review for a product
-          example: Increible prueba tecnica
+          example: Increible producto
           
     PostResponse:
       type: object
