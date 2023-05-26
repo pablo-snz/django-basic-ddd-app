@@ -1,6 +1,6 @@
 # Django Basic DDD App
 
-This repository is a simple e-commerce API created with Django and Domain-Driven Design.
+This repository is a simple e-commerce API created with Django and [django-ddd](https://github.com/jdiazromeral/django-ddd)
 
 ## API Definition
 
