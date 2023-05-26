@@ -2,7 +2,7 @@ from uuid import UUID
 from abc import ABC, abstractmethod
 from typing import List
 
-from django_basic_ddd_app.api.domain.entities.product import Product
+from api.domain.entities.product import Product
 
 
 class ProductRepository(ABC):

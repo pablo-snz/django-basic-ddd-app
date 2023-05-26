@@ -1,5 +1,5 @@
 import pytest
-from django_basic_ddd_app.api.domain.value_objects.name import Name
+from api.domain.value_objects.name import Name
 
 
 # Test VO Name, business rules:

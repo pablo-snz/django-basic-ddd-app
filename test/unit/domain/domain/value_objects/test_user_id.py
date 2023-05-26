@@ -1,5 +1,5 @@
 import pytest
-from django_basic_ddd_app.api.domain.value_objects.user_id import UserId
+from api.domain.value_objects.user_id import UserId
 
 # Test VO Name, business rules:
 # Name basic method: get -> returns the value

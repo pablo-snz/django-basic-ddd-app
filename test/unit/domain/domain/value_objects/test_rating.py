@@ -1,5 +1,5 @@
 import pytest
-from django_basic_ddd_app.api.domain.value_objects.rating import Rating
+from api.domain.value_objects.rating import Rating
 
 # Test VO Rating, business rules:
 # basic method: get -> returns the value

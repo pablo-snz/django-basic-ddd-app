@@ -1,4 +1,4 @@
-from django_basic_ddd_app.api.application.interfaces.uow import UnitOfWork
+from api.application.interfaces.uow import UnitOfWork
 from django.db import transaction
 
 

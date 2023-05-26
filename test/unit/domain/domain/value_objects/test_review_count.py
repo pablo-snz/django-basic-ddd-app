@@ -1,5 +1,5 @@
 import pytest
-from django_basic_ddd_app.api.domain.value_objects.review_count import ReviewCount
+from api.domain.value_objects.review_count import ReviewCount
 
 # Test VO ReviewCount, business rules:
 # basic method: get -> returns the value

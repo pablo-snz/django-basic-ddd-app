@@ -1,10 +1,10 @@
 import pytest
 
 from test.unit.application.services import MockedRepository, MockedUnitOfWork
-from django_basic_ddd_app.api.application.services.review_command import (
+from api.application.services.review_command import (
     ReviewCommandService,
 )
-from django_basic_ddd_app.api.domain.entities.product import Product
+from api.domain.entities.product import Product
 
 
 @pytest.fixture

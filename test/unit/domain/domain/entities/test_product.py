@@ -1,6 +1,6 @@
 import pytest
 from uuid import UUID
-from django_basic_ddd_app.api.domain.entities.product import Product
+from api.domain.entities.product import Product
 
 # Product es la raiz de nuestro agregado. Tiene bastante lógica de negocio que queremos testear correctamente.
 # Bussines logic para testear:

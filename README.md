@@ -322,3 +322,43 @@ curl -X POST "http://localhost:8000/reviews/create" \
 }'
 
 ```
+
+## Installing with Docker
+
+Using Docker, you can create a containerized environment for the application which has all the necessary dependencies installed.
+
+First, make sure Docker and Docker Compose are installed on your machine. If you do not have these installed, you can download them from Docker's official website.
+
+Once you have Docker and Docker Compose installed, navigate to the root directory of the project where the `Dockerfile` and `docker-compose.yml` files are located.
+
+Make `entrypoint.sh` executable by running the following command:
+
+```bash
+chmod +x entrypoint.sh
+```
+
+
+Build the Docker image by running the following command:
+
+```bash
+docker-compose build
+```
+
+After building the image, you can run the application using the following command:
+
+```bash
+docker-compose up
+```
+
+The application will now be accessible at http://localhost:8000.
+
+
+### Testing
+
+While the application is running in a Docker container, you can perform tests by executing the following command in another terminal:
+
+```bash
+docker-compose exec web pytest --cov=api
+```
+
+This command tells Docker to execute the command python manage.py test inside the running container named web.
