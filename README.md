@@ -29,7 +29,7 @@ You can use a tool such as https://jwt.io/ to generate the token.
 ```yaml
 openapi: 3.0.3
 info:
-  title: YourStep - OpenAPI 3.0
+  title: DBDA - OpenAPI 3.0
   description: Basic API
   version: 0.1.0
 
