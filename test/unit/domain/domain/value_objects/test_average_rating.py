@@ -1,5 +1,5 @@
 import pytest
-from django_basic_ddd_app.api.domain.value_objects.average_rating import AverageRating
+from api.domain.value_objects.average_rating import AverageRating
 
 # Test VO AverageRating, business rules:
 # AverageRating basic method: get -> returns the value

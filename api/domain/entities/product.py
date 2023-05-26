@@ -1,10 +1,10 @@
 from uuid import UUID, uuid4
 
-from django_basic_ddd_app.api.domain.entities.review import Review
-from django_basic_ddd_app.api.domain.value_objects.name import Name
-from django_basic_ddd_app.api.domain.value_objects.average_rating import AverageRating
-from django_basic_ddd_app.api.domain.value_objects.description import Description
-from django_basic_ddd_app.api.domain.value_objects.review_count import ReviewCount
+from api.domain.entities.review import Review
+from api.domain.value_objects.name import Name
+from api.domain.value_objects.average_rating import AverageRating
+from api.domain.value_objects.description import Description
+from api.domain.value_objects.review_count import ReviewCount
 
 
 class Product:

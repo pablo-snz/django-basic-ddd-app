@@ -1,6 +1,6 @@
-from django_basic_ddd_app.api.domain.interfaces.repository import ProductRepository
-from django_basic_ddd_app.api.infrastructure.models import ProductModel, ReviewModel
-from django_basic_ddd_app.api.domain.entities.product import Product
+from api.domain.interfaces.repository import ProductRepository
+from api.infrastructure.models import ProductModel, ReviewModel
+from api.domain.entities.product import Product
 from uuid import UUID
 
 

@@ -2,8 +2,8 @@ from rest_framework.request import Request
 from rest_framework.views import APIView
 from typing import Tuple, Optional
 
-from django_basic_ddd_app.api.infrastructure.django_repository import DjangoProductRepository
-from django_basic_ddd_app.api.infrastructure.django_uow import DjangoUoW
+from api.infrastructure.django_repository import DjangoProductRepository
+from api.infrastructure.django_uow import DjangoUoW
 import jwt
 
 

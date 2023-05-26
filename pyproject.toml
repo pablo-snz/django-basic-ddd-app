@@ -5,7 +5,6 @@ description = "Django Basic application using django-ddd"
 authors = ["pablo-snz <pablo.snz.brm@gmail.com>"]
 license = "MIT License"
 readme = "README.md"
-packages = [{include = "django_basic_ddd_app"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
